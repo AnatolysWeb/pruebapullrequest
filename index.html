@@ -3,93 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype - Pull Request</title>
+    <title>Dark Side</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            text-align: center;
+            background-color: white; /* Fondo blanco para el cuerpo */
+            color: #333; /* Texto oscuro para el cuerpo */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Alinea el contenido arriba */
+            align-items: center;
         }
         header {
-            background-color: #333;
+            background-color: #333; /* Fondo gris oscuro para el header */
             color: white;
             padding: 20px;
+            width: 100%; /* Ocupa todo el ancho */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+        }
+        h1 {
+            font-size: 2.5rem; /* Tamaño de letra grande para "Dark Side" */
+            margin: 0;
+        }
+        .menu {
+            margin-top: 10px; /* Espacio entre "Dark Side" y el menú */
+            font-size: 1rem; /* Letras más pequeñas para el menú */
+        }
+        .menu a {
+            color: white; /* Color blanco para los enlaces */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold; /* Texto en negrita */
+        }
+        .menu a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
         }
         main {
             padding: 20px;
-            white-space: pre-wrap;
-            font-family: monospace;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
+            color: #333; /* Texto oscuro para el contenido principal */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Dueño: Robledo ; Colaborador: Tony</h1>
+        <h1>Dark Side</h1>
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#nosotros">Nosotros</a>
+        </div>
     </header>
     <main>
-        <p>Esta es una página web genérica con HTML, CSS y JavaScript.</p>
-        <p>Implementacion de PULL REQUEST, Repositorios Colaborativos</p>
-        <p>Materia: Lenguajes III
-        </p>
-        <button onclick="mostrarMensaje()">¡Toca Aqui!</button>
-        <p id="mensaje"></p>
-        <pre>
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣿⠟⢉⣠⢲⡙⣎⢳⡙⣎⢳⡙⣎⢧⡛⣴⢢⠄⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠃⣰⢣⢎⢧⡹⢬⢧⡹⢬⢧⡹⡜⢦⡝⢦⣋⢞⡄⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣰⢣⢏⡞⢦⡛⣜⠦⡝⣎⠶⣱⠹⣎⠼⣣⢎⡳⣜⡂⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢠⢇⡏⡞⣜⢣⠝⠌⠓⢉⣀⡀⠑⢯⡜⣣⡓⢮⡕⢮⡱⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠘⠘⢈⣁⣀⣤⣤⣶⣿⣿⣿⡇⠀⠸⡜⣥⢋⠷⣸⢣⡝⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢰⢾⣿⣿⣶⣽⣿⣿⣿⣿⣿⣿⠀⠠⠀⠘⡶⣩⢛⡴⢳⡜⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠘⣽⣻⣯⣿⣿⣿⣿⣿⣿⣿⡟⠀⠂⠄⠀⢳⠥⣏⠼⣣⠎⢀⣿⣿⣿⣿⣿⠀⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠹⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⡈⠐⠀⣠⢏⡞⣬⠳⠁⢀⣾⣿⣿⣿⣿⣿⣆⠑⣀⠈⣻⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣀⠙⣿⣿⣿⣿⡿⠿⠋⠀⢀⡠⡔⢮⡱⢮⡜⠆⢁⣴⣿⣿⣿⣯⠙⠛⠛⠉⠓⠀⢢⠀⠻⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⡀⠀⢀⡀⣀⡠⢤⡜⣇⢧⡛⣇⠻⠄⠀⠀⢸⣿⣿⣿⣿⣧⣀⠸⠤⣀⠘⢄⠀⠣⡀⠻⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠈⢵⡙⡦⡝⡜⡦⡝⠌⠁⠠⢌⠀⢸⣿⣿⣿⣿⣿⣿⣶⣤⡀⠣⢄⠁⠠⡰⢄⠙⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠙⠲⠉⠃⠁⡀⠤⡘⢡⢊⠀⢸⣿⣿⣿⣿⣿⡋⠀⢈⡡⢀⣀⠉⢒⡝⣎⢦⡀⠛⢿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠀⢠⠃⡜⠰⣁⠣⢌⢂⡀⠙⠛⠛⠙⠛⠻⢶⣶⣶⣦⣤⡉⠸⡜⡜⣦⠳⡄⠉⢿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⡿⠿⠛⠁⢐⠢⡉⡔⠣⢄⠣⢌⠂⠐⣁⠞⣭⢫⡝⣢⠌⠊⢿⣿⣿⣿⡄⠙⣜⡲⡝⡼⣡⠸⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⢃⡠⣄⠶⡸⣄⣡⢀⣁⣈⡱⣌⠖⣎⢞⡹⣌⠻⡔⠃⠚⣥⢛⡤⠀⢻⣿⣿⣿⡆⠈⠑⣙⢲⡱⠂⢹
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢀⡜⢦⢳⢬⣓⠳⡜⢦⣋⠶⣡⠗⣮⣙⢎⠮⣕⢎⠷⣱⢂⡀⠠⡙⢼⡡⠀⠽⣿⣿⠃⢠⠳⣬⢣⡝⠀⣼
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁⡔⢮⡜⣭⠚⠦⣍⠻⣜⢣⢞⡹⢆⡻⢴⡩⢎⡻⡜⣎⢳⠥⣏⠶⣀⠐⠠⡙⡵⡀⠈⠛⢠⣋⠷⣌⡳⡜⢀⣿
-            ⣿⣿⣿⣿⣿⣿⡿⠟⠁⡠⢎⡽⣘⢧⡚⠄⢀⡞⡼⡹⣌⠗⣮⢱⢫⡕⣣⡝⣣⢳⡹⣌⢧⡛⣬⢳⡱⢆⠀⠡⢂⡑⠂⠀⡶⣩⢞⡲⣱⠃⢸⣿
-            ⣿⣿⣿⣿⡿⠉⣁⠴⣩⠳⣍⠶⡍⠖⡡⠀⢼⡸⣱⠳⣬⢛⡴⣋⠶⣙⠦⣝⢲⢣⢳⡜⣲⡙⢦⢧⣙⡎⢧⠀⢡⠘⠀⣜⡱⢣⢮⡱⢣⠁⣼⣿
-            ⣿⣿⠟⢁⡠⢞⡬⣓⢧⡛⡬⢃⠜⡰⠁⠀⣧⠳⣥⢛⡴⣋⠶⣩⠳⣍⠾⣌⢧⠫⢖⡹⢦⠹⢣⠞⠦⡙⢊⠄⠀⠃⢠⢎⡵⣋⠶⣩⠇⠠⣿⣿
-            ⡟⢁⡰⢎⡵⣋⠶⠩⠖⡡⠢⠅⠊⢀⡄⢘⢦⡛⡴⣋⢶⡩⠞⠥⢛⡈⠥⡈⢆⠱⡈⡔⢢⠑⣂⠎⢢⠑⡌⠂⠠⡁⢘⢎⠶⣩⢳⡱⢀⣸⣿⣿
-            ⠀⢢⡝⣎⠶⡉⠂⠀⠀⠁⢃⣤⣾⣿⡃⠈⢒⡉⢓⠩⢄⡑⠪⠔⣡⠘⡰⢁⠎⢢⠑⡌⢢⢑⠢⡘⢡⠊⠔⢀⣄⠀⠈⠌⠛⡰⠁⠀⣰⣿⣿⣿
-            ⣧⠈⠞⣬⠳⣍⢯⡙⢦⣀⠻⣿⣿⣿⣷⡄⠢⠘⡄⠣⢌⠢⢍⠒⡄⢣⠑⠌⠈⠁⠊⠐⡡⢊⠄⠉⣀⣀⣴⣿⣿⣿⣦⣤⣤⣤⣴⣾⣿⣿⣿⣿
-            ⣿⣧⠈⠲⡹⡜⢦⣋⠷⣘⢆⡈⢿⣿⣿⣿⣦⡈⠐⠉⠆⠱⠈⠘⣀⠠⡀⢆⠱⣈⠦⡑⡰⢁⠎⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣷⣤⡀⠙⢣⢎⡳⣍⠞⣴⡀⠻⣿⣿⣿⣿⣷⣦⢀⣂⢤⡡⢦⡱⣌⢦⠳⡔⢦⡱⢤⡡⢎⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣷⣤⠈⠑⢮⣙⠦⡝⣆⡈⠙⡿⣿⣿⠏⠐⠎⡶⣙⠶⣱⡚⣬⢳⣙⢮⡱⢧⣙⢮⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⡈⠛⡜⢦⣙⣀⡠⢤⡀⠠⢒⡆⠰⣍⠞⣥⢛⡴⣓⢮⢲⣙⢦⣋⢞⡀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠘⣧⠚⡔⢹⠀⠉⠒⡄⠘⠀⣮⠙⣦⡏⣶⢩⡎⢳⡜⣦⡝⣮⢱⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠊⢷⡡⡈⠙⡖⠀⡝⠀⠆⠈⢷⡱⣚⠴⣫⢜⣣⠳⣜⡱⢎⢧⣃⠀⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢁⠠⣀⠈⡱⠀⡝⠀⠹⠀⣀⢠⢇⡳⣍⢞⣱⠺⣔⠻⣔⢫⠞⣦⡙⡆⠐⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⢠⢎⡗⢦⠀⠑⠂⠈⢁⡠⢔⣎⠳⣎⠵⣚⠼⣢⠟⣬⢛⡬⢇⡻⢴⡹⣜⡀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⢰⢋⡞⣜⢣⡛⡴⣸⡙⠮⣱⢫⡜⡳⢬⡛⣬⠳⣥⢛⢦⢫⠼⡹⣜⢣⢳⢬⡱⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣎⠳⣜⢎⠧⣝⢲⢥⠳⣄⠀⠓⢼⡩⢧⣙⠶⣙⠦⣏⢎⢧⢫⡕⢮⣙⢎⡖⣳⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠂⡼⡹⡜⢮⡹⢬⡓⢮⣓⢎⡳⣄⠀⠙⢦⣋⠞⣥⡛⡜⣎⢮⠳⡜⠃⢎⡳⢎⡵⠂⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⡞⣱⢹⠲⣍⢧⡹⢣⠞⣬⠳⣬⢳⡈⠆⠉⠺⠥⠛⠘⢈⠢⡑⢌⡡⢎⡳⣍⢞⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠽⣌⡳⡹⣜⠲⣍⡳⣋⡖⣏⢖⡣⢇⡘⡀⠀⡔⢢⠡⢢⠑⡌⡴⣩⢳⡱⣚⠼⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-            ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⢘⠦⣝⡱⢎⣝⡲⣕⠳⡼⣘⢮⣱⢫⡄⠱⠀⠰⡁⢎⠡⠎⣰⢣⢇⢧⠳⣍⠂⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        </pre>
+        <p>Bienvenido a la página principal.</p>
     </main>
-    <script>
-        function mostrarMensaje() {
-            document.getElementById("mensaje").innerText = "Como te gusta tocarla, golosa.";
-        }
-    </script>
 </body>
 </html>
