@@ -1,0 +1,79 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #111; /* Fondo oscuro */
+    color: #ddd; /* Texto claro */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #222; /* Gris oscuro */
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ff4444; /* Rojo vibrante */
+}
+
+/* Menú de navegación */
+.menu {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.menu a {
+    color: #ffcc00; /* Amarillo dorado */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #ff4444;
+}
+
+/* Estilos para la sección principal */
+main {
+    padding: 20px;
+    color: #ddd;
+    background-color: #333; /* Fondo gris oscuro */
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
+}
+
+/* Secciones específicas */
+section {
+    background-color: #444; /* Fondo más claro dentro de main */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para los enlaces en las secciones */
+section a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+    color: #ff4444;
+}
