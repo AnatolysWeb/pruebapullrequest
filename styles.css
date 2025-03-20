@@ -3,39 +3,56 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: white; /* Fondo blanco para el cuerpo */
-    color: #f00000; /* Texto oscuro para el cuerpo */
+    background-color: #333; /* Darker background */
+    color: #fff; /* Light text for better contrast */
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Alinea el contenido arriba */
     align-items: center;
 }
+
 header {
-    background-color: #e70000; /* Fondo gris oscuro para el header */
+    background-color: #e70000; /* Fondo rojo para el header */
     color: white;
     padding: 20px;
     width: 100%; /* Ocupa todo el ancho */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
+
 h1 {
     font-size: 2.5rem; /* Tamaño de letra grande para "Dark Side" */
     margin: 0;
 }
+
 .menu {
     margin-top: 10px; /* Espacio entre "Dark Side" y el menú */
     font-size: 1rem; /* Letras más pequeñas para el menú */
 }
+
 .menu a {
     color: white; /* Color blanco para los enlaces */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold; /* Texto en negrita */
 }
+
 .menu a:hover {
     text-decoration: underline; /* Subrayado al pasar el mouse */
 }
+
 main {
     padding: 20px;
-    color: #333; /* Texto oscuro para el contenido principal */
+    color: #fff; /* Texto blanco para el contenido principal */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+
+    .menu a {
+        font-size: 0.9rem; /* Hacer el menú más pequeño */
+        margin: 0 10px;
+    }
 }
